@@ -1,0 +1,158 @@
+
+
+
+[data-theme="dark"] {
+    --main-color: #272b30;
+    --seconde-color: #32383e;
+    --color-text: #fff;
+    --btn-main-color: #272729;
+    --link-hover:#2888ad;
+ }
+ @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap");
+
+body{
+    background-color: #272b30;
+
+     font-family: "Comfortaa", cursive; 
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Nerko One", cursive;
+   color: var(--color-text) !important;
+}
+p{
+   color: #9ea1a5;
+}
+
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+    font-family: "Nerko One", cursive;
+    color: var(--color-text) !important;
+ }
+
+.section-1{
+width: 100%;
+height: 30vh;
+background-image: url(../assets/image/paladins.png);
+background-repeat: no-repeat;
+background-size: cover,cover;
+background-position: center,center;
+display: flex;
+
+}
+.navbar{
+    width: 70%;
+    margin: auto;
+    border-radius: 25px;
+    background-color: #394a7b;
+    color: white;
+    position: sticky;
+    top: 0;
+    margin: -30px auto 70px;
+}
+.navbar .nav-link{
+    color: white;
+
+}
+
+.navbar  .nav-link.active,
+.navbar .nav-link:hover {
+   color: #09c !important;
+   transition: color 0.5s;
+}
+
+
+/***** Home *****/
+.home{
+   margin-bottom: 70px;
+}
+.home .card {
+   filter: grayscale(0.7);
+   transition: transform 0.5s, filter 0.5s 0.1s;
+}
+
+header img {
+   max-height: 30vh;
+   object-fit: cover;
+}
+
+.home .card:hover {
+   transform: scale(1.05);
+   filter: grayscale(0);
+}
+
+nav {
+   background-color: rgb(58, 73, 123) !important;
+
+   margin-inline: auto;
+   margin-top: -30px;
+   border-radius: 20px;
+   box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+}
+
+/***** End Home *****/
+
+/***** Details *****/
+.details {
+   background-color: #272729be;
+
+   backdrop-filter: blur(4px);
+   min-height: 100vh;
+}
+
+/***** End Details *****/
+
+/***** Loader *****/
+.loading {
+   position: fixed;
+   z-index: 9999;
+   inset: 0;
+   background-color: #272b30e3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.loader {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   display: inline-block;
+   border-top: 4px solid #fff;
+   border-right: 4px solid transparent;
+   box-sizing: border-box;
+   animation: rotation 1s linear infinite;
+   position: relative;
+}
+.loader::after {
+   content: "";
+   box-sizing: border-box;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border-left: 4px solid #ff3d00;
+   border-bottom: 4px solid transparent;
+   animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+/***** End Loader *****/
